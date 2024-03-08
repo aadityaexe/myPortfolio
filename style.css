@@ -310,6 +310,31 @@ section {
     margin: auto 0;
 }
 
+/* Style for dark mode toggle button */
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+/* Adjust the appearance of the button in dark mode */
+.dark-mode-toggle.dark-mode {
+    color: white;
+}
+
+/* Apply styles for dark mode */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .nav-links a {
+    color: white;
+}
+
 /* EXPERIENCE SECTION */
 
 #skills {
