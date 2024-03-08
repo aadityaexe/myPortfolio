@@ -54,6 +54,11 @@ a:hover {
     text-decoration-color: rgb(181, 181, 181);
 }
 
+.prop {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     font-size: 2rem;
 }
