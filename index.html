@@ -19,7 +19,9 @@
     <!-- DESKTOP NAV: visible when > 1200px -->
     <nav id="desktop-nav"
         class="sticky top-0 z-50 bg-white flex justify-between items-center h-[10vh] px-[10rem] max-[1200px]:hidden shadow-md">
-        <div class="logo text-2xl font-semibold select-none">Aditya Kumar</div>
+        <a href="#profile">
+            <div class="logo text-2xl font-semibold select-none">Aditya Kumar</div>
+        </a>
         <ul class="nav-links flex gap-8 list-none text-[1.5rem]">
             <li><a href="#about"
                     class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">About</a></li>
@@ -56,42 +58,58 @@
 
 
     <!-- PROFILE SECTION -->
-    <section id="profile" class="pt-[4vh] section px-[10rem] max-[1200px]:px-[5%] flex justify-center items-center gap-20
-                  h-[96vh] max-[1400px]:h-[83vh] max-[1400px]:mb-24 max-[1200px]:flex-col max-[600px]:h-[83vh]">
-        <!-- picture -->
+    <section id="profile" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] flex justify-center items-center gap-20
+           h-[96vh] max-[1400px]:h-[83vh] max-[1400px]:mb-24 max-[1200px]:flex-col max-[600px]:h-auto">
+        <!-- Picture -->
         <div
-            class="section__pic-container w-[400px] h-[400px] max-[1200px]:w-[275px] max-[1200px]:h-[275px] max-[600px]:h-[78vw]">
-            <img src="./assets/firstPHOTO.jpg" alt="Aditya Kumar" class="w-full h-full object-cover rounded-lg" />
+            class="section__pic-container w-[400px] h-[400px] max-[1200px]:w-[275px] max-[1200px]:h-[275px] max-[600px]:w-[78vw] max-[600px]:h-[78vw]">
+            <img src="./assets/firstPHOTO.jpg" alt="Aditya Kumar portrait"
+                class="w-full h-full object-cover rounded-lg shadow-lg" />
         </div>
 
-        <!-- text -->
+        <!-- Text -->
         <div class="section__text text-center max-[1200px]:w-full">
             <p class="section__text__p1 text-gray-600 font-semibold">Hello, I'm</p>
             <h1 class="title text-[3rem] max-[600px]:text-2xl font-bold">Aditya Kumar</h1>
-            <p class="section__text__p2 text-[1.75rem] max-[600px]:text-[1.25rem] font-semibold mb-6">Web Developer
+            <p class="section__text__p2 text-[1.75rem] max-[600px]:text-[1.25rem] font-semibold mb-6">
+                Web Developer
             </p>
 
-            <div class="btn-container flex justify-center max-[1200px]:justify-center gap-4 flex-wrap">
-                <button
-                    class="btn btn-color-2 px-6 py-3 rounded-full border border-[rgba(53,53,53,0.1)] font-semibold hover:bg-gray-800 hover:text-white transition"
-                    onclick="window.open('./assets/AdityaResume.pdf')">Download CV</button>
+            <!-- Buttons -->
+            <div class="btn-container flex justify-center gap-4 flex-wrap">
+                <a href="./assets/AdityaResume.pdf" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-color-2 px-6 py-3 rounded-full border border-[rgba(53,53,53,0.1)] font-semibold hover:bg-gray-800 hover:text-white transition">
+                    Download CV
+                </a>
 
-                <button
-                    class="btn btn-color-1 px-6 py-3 rounded-full border border-[rgba(53,53,53,0.1)] font-semibold hover:bg-black hover:text-white transition"
-                    onclick="location.href='#contact'">Contact Info</button>
+                <a href="#contact"
+                    class="btn btn-color-1 px-6 py-3 rounded-full border border-[rgba(53,53,53,0.1)] font-semibold hover:bg-black hover:text-white transition">
+                    Contact Info
+                </a>
             </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-                    onclick="location.href='www.linkedin.com/in/aadityaexe'" />
-                <img src="./assets/github.png" alt="My Github profile" class="icon"
-                    onclick="location.href='https://github.com/aadityaexe'" />
-                <img src="./assets/x.png" alt="x" class="icon w-8 h-8 cursor-pointer"
-                    onclick="location.href='https://x.com/Aadityakumar_01'" />
-                <img src="./assets/leetcode.png" alt="Leetcode" class="icon w-8 h-8 cursor-pointer"
-                    onclick="location.href='https://leetcode.com/u/aadityakumar_01'" />
+
+            <!-- Social Icons -->
+            <div class="flex justify-center gap-4 mt-6">
+                <a href="https://www.linkedin.com/in/aadityaexe" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/linkedin.png" alt="LinkedIn profile"
+                        class="icon w-8 h-8 cursor-pointer hover:scale-110 transition" />
+                </a>
+                <a href="https://github.com/aadityaexe" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/github.png" alt="GitHub profile"
+                        class="icon w-8 h-8 cursor-pointer hover:scale-110 transition" />
+                </a>
+                <a href="https://x.com/Aadityakumar_01" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/x.png" alt="X profile"
+                        class="icon w-8 h-8 cursor-pointer hover:scale-110 transition" />
+                </a>
+                <a href="https://leetcode.com/u/aadityakumar_01" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/leetcode.png" alt="LeetCode profile"
+                        class="icon w-8 h-8 cursor-pointer hover:scale-110 transition" />
+                </a>
             </div>
         </div>
     </section>
+
 
     <!-- ABOUT SECTION -->
     <section id="about" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%]">
@@ -298,41 +316,54 @@
 
         <div class="about-containers flex gap-6 flex-wrap justify-center mt-8">
             <!-- project card -->
-            <div class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px]">
+            <div
+                class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px] transition-transform hover:scale-[1.03] hover:shadow-lg">
                 <img src="./assets/GEMINI.png" alt="Gemini" class="project-img w-full rounded-2xl mb-4 object-cover" />
                 <h3 class="text-xl font-semibold text-center">Gemini Clone</h3>
                 <div class="btn-container flex gap-4 justify-center mt-4">
                     <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
-                        onclick="location.href='https://github.com/aadityaexe/Google-Gemini-Clone'">Github</button>
+                        onclick="location.href='https://github.com/aadityaexe/Google-Gemini-Clone'">GitHub</button>
                     <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
                         onclick="location.href='https://aditya-exe-gemini-clone.netlify.app/'">Live Demo</button>
                 </div>
             </div>
 
-            <div class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px]">
+            <div
+                class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px] transition-transform hover:scale-[1.03] hover:shadow-lg">
                 <img src="./assets/crypto.png" alt="Crypto" class="project-img w-full rounded-2xl mb-4 object-cover" />
                 <h3 class="text-xl font-semibold text-center">Cryptocurrency Platform (Fake Coin)</h3>
                 <div class="btn-container flex gap-4 justify-center mt-4">
                     <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
-                        onclick="location.href='https://github.com/aadityaexe/FackCoin'">Github</button>
+                        onclick="location.href='https://github.com/aadityaexe/FackCoin'">GitHub</button>
                     <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
                         onclick="location.href='https://fake-coine.netlify.app'">Live Demo</button>
                 </div>
             </div>
 
-            <div class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px]">
+            <div
+                class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px] transition-transform hover:scale-[1.03] hover:shadow-lg">
                 <img src="./assets/youtube-clone.png" alt="Youtube Clone"
                     class="project-img w-full rounded-2xl mb-4 object-cover" />
-                <h3 class="text-xl font-semibold text-center">Youtube Clone UiUx</h3>
+                <h3 class="text-xl font-semibold text-center">YouTube Clone UI/UX</h3>
                 <div class="btn-container flex gap-4 justify-center mt-4">
                     <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
-                        onclick="location.href='https://github.com/aadityaexe/Youtube-Clone'">Github</button>
+                        onclick="location.href='https://github.com/aadityaexe/Youtube-Clone'">GitHub</button>
                     <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
                         onclick="location.href='https://aditya-exe-youtybe-clone.netlify.app/'">Live Demo</button>
                 </div>
             </div>
         </div>
+
+        <!-- View All Projects Button -->
+        <div class="flex justify-center mt-10">
+            <button
+                class="px-6 py-3 text-lg font-semibold rounded-full border hover:bg-gray-900 hover:text-white transition"
+                onclick="location.href='project.html'">
+                View All Projects
+            </button>
+        </div>
     </section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] mt-12">
@@ -360,9 +391,10 @@
                 <img src="./assets/x.png" alt="x" class="w-10 h-10" />
                 <p class="text-lg"><a href="https://x.com/Aadityakumar_01" class="hover:underline">X</a></p>
             </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="www.linkedin.com/in/aadityaexe">LinkedIn</a></p>
+            <div class="contact-info-container flex items-center gap-3">
+                <img src="./assets/leetcode.png" alt="leetcode" class="w-10 h-10" />
+                <p class="text-lg"><a href="https://leetcode.com/u/aadityakumar_01" class="hover:underline">LeetCode</a>
+                </p>
             </div>
         </div>
     </section>
