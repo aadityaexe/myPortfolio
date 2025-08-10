@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
+
+.c {
+    font-family: 'Libertinus Serif', sans-serif;
+}
+
 :root {
     --accent-border: rgba(53, 53, 53, 0.15);
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playwrite AU QLD', sans-serif;
+    font-weight: 700;
 }
 
 /* tiny scoped CSS for hamburger transforms (clean and simple) */
