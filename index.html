@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" href="./assets/favi.svg" />
     <title>Aditya Kumar — Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 
 <body class="bg-white text-gray-900">
@@ -24,14 +22,28 @@
             <div class="logo text-2xl font-semibold select-none">Aditya Kumar</div>
         </a>
         <ul class="nav-links flex gap-8 list-none text-[1.5rem]">
-            <li><a href="#about"
-                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">About</a></li>
-            <li><a href="#skills"
-                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Skills</a></li>
-            <li><a href="#projects"
-                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Projects</a></li>
-            <li><a href="#contact"
-                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Contact</a></li>
+            <li>
+                <a href="#about"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">About</a>
+            </li>
+
+            <li>
+                <a href="#skills"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Skills</a>
+            </li>
+
+            <li>
+                <a href="#experience"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Experience </a>
+            </li>
+            <li>
+                <a href="#projects"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Projects</a>
+            </li>
+            <li>
+                <a href="#contact"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Contact</a>
+            </li>
         </ul>
     </nav>
 
@@ -49,19 +61,30 @@
 
             <ul id="mobileMenu"
                 class="menu-links absolute right-0 top-full bg-white border border-gray-200 rounded-md overflow-hidden w-[220px] max-h-0 transition-all duration-300">
-                <li><a href="#about" class="block px-4 py-3 text-[1.1rem]">About</a></li>
-                <li><a href="#skills" class="block px-4 py-3 text-[1.1rem]">Skills</a></li>
-                <li><a href="#projects" class="block px-4 py-3 text-[1.1rem]">Projects</a></li>
-                <li><a href="#contact" class="block px-4 py-3 text-[1.1rem]">Contact</a></li>
+                <li>
+                    <a href="#about" class="block px-4 py-3 text-[1.1rem]">About</a>
+                </li>
+                <li>
+                    <a href="#skills" class="block px-4 py-3 text-[1.1rem]">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#experience" class="block px-4 py-3 text-[1.1rem]">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="block px-4 py-3 text-[1.1rem]">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact" class="block px-4 py-3 text-[1.1rem]">Contact</a>
+                </li>
             </ul>
         </div>
     </nav>
 
-
-
     <!-- PROFILE SECTION -->
-    <section id="profile" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] flex justify-center items-center gap-20
-           h-[96vh] max-[1400px]:h-[83vh] max-[1400px]:mb-24 max-[1200px]:flex-col max-[600px]:h-auto">
+    <section id="profile"
+        class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] flex justify-center items-center gap-20 h-[96vh] max-[1400px]:h-[83vh] max-[1400px]:mb-24 max-[1200px]:flex-col max-[600px]:h-auto">
         <!-- Picture -->
         <div
             class="section__pic-container w-[400px] h-[400px] max-[1200px]:w-[275px] max-[1200px]:h-[275px] max-[600px]:w-[78vw] max-[600px]:h-[78vw]">
@@ -72,7 +95,9 @@
         <!-- Text -->
         <div class="section__text text-center max-[1200px]:w-full">
             <p class="section__text__p1 text-gray-600 font-semibold">Hello, I'm</p>
-            <h1 class="title text-[3rem] max-[600px]:text-2xl font-bold">Aditya Kumar</h1>
+            <h1 class="title text-[3rem] max-[600px]:text-2xl font-bold">
+                Aditya Kumar
+            </h1>
             <p class="section__text__p2 text-[1.75rem] max-[600px]:text-[1.25rem] font-semibold mb-6 c">
                 Web Developer
             </p>
@@ -112,10 +137,8 @@
         </div>
     </section>
 
-
     <!-- ABOUT SECTION -->
     <section id="about" class="pt-[6vh] px-[10rem] max-[1600px]:px-[6rem] max-[1200px]:px-[5%]">
-
         <p class="section__text__p1 text-gray-600 font-semibold text-center">
             Get To Know More
         </p>
@@ -124,7 +147,6 @@
         </h2>
 
         <div class="section-container flex gap-20 mt-12 max-[1200px]:flex-col items-center">
-
             <!-- Profile Image -->
             <div
                 class="section__pic-container w-[420px] h-[420px] max-[1400px]:w-[350px] max-[1400px]:h-[350px] max-[1200px]:w-[275px] max-[1200px]:h-[275px] mx-auto relative">
@@ -135,21 +157,20 @@
 
             <!-- Details -->
             <div class="about-details-container flex flex-col justify-center gap-8 max-w-[850px]">
-
                 <!-- Cards -->
                 <div class="about-containers grid grid-cols-2 gap-8 max-[600px]:grid-cols-1">
-
                     <div class="details-container p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow duration-300"
-                        style="border-color: var(--accent-border);">
+                        style="border-color: var(--accent-border)">
                         <img src="./assets/experience.png" alt="" class="icon mx-auto w-12 h-12" />
                         <h3 class="text-xl font-semibold text-center mt-4">Experience</h3>
                         <p class="text-center text-gray-600 mt-2">
-                            0 years <br /> Web Developer
+                            0 years <br />
+                            Web Developer
                         </p>
                     </div>
 
                     <div class="details-container p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow duration-300"
-                        style="border-color: var(--accent-border);">
+                        style="border-color: var(--accent-border)">
                         <img src="./assets/education.png" alt="" class="icon mx-auto w-12 h-12" />
                         <h3 class="text-xl font-semibold text-center mt-4">Education</h3>
                         <p class="text-center text-gray-600 mt-2">
@@ -159,41 +180,43 @@
                             </span>
                         </p>
                     </div>
-
                 </div>
 
                 <!-- Description -->
                 <div class="text-container text-justify max-w-[850px] mx-auto">
                     <p class="text-gray-700 leading-relaxed text-lg">
-                        Detail-oriented and creative Front-End Developer with a strong foundation in HTML, CSS, and
-                        JavaScript.
-                        Experienced in building responsive, user-friendly web applications using React.js and Tailwind
-                        CSS.
-                        Proven ability to integrate APIs, optimize performance, and enhance user experiences through
-                        dynamic animations
-                        and modern design principles. Skilled in leveraging front-end technologies to develop scalable
-                        and maintainable
-                        solutions. Committed to continuous learning and staying up-to-date with industry trends.
+                        Detail-oriented and creative Front-End Developer with a strong
+                        foundation in HTML, CSS, and JavaScript. Experienced in building
+                        responsive, user-friendly web applications using React.js and
+                        Tailwind CSS. Proven ability to integrate APIs, optimize
+                        performance, and enhance user experiences through dynamic
+                        animations and modern design principles. Skilled in leveraging
+                        front-end technologies to develop scalable and maintainable
+                        solutions. Committed to continuous learning and staying up-to-date
+                        with industry trends.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-
     <!-- SKILLS -->
     <section id="skills" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] mt-12">
-        <p class="section__text__p1 text-gray-600 font-semibold text-center">Explore My</p>
-        <h2 class="title text-3xl md:text-4xl font-bold text-center mt-2">Skills</h2>
+        <p class="section__text__p1 text-gray-600 font-semibold text-center">
+            Explore My
+        </p>
+        <h2 class="title text-3xl md:text-4xl font-bold text-center mt-2">
+            Skills
+        </h2>
 
         <div class="skills mt-8">
             <div class="about-containers flex gap-6 flex-wrap justify-center">
-
                 <!-- FRONTEND -->
                 <div class="details-container p-6 rounded-2xl border max-w-[420px]"
-                    style="border-color: var(--accent-border);">
-                    <h3 class="skills-sub-title text-xl font-semibold mb-4">Frontend Development</h3>
+                    style="border-color: var(--accent-border)">
+                    <h3 class="skills-sub-title text-xl font-semibold mb-4">
+                        Frontend Development
+                    </h3>
                     <div class="article-container flex flex-wrap gap-4">
                         <article class="flex items-center gap-3 w-full">
                             <h4 class="font-medium">HTML</h4>
@@ -218,7 +241,7 @@
 
                 <!-- BACKEND -->
                 <div class="details-container p-6 rounded-2xl border max-w-[420px]"
-                    style="border-color: var(--accent-border);">
+                    style="border-color: var(--accent-border)">
                     <h3 class="skills-sub-title text-xl font-semibold mb-4">Backend</h3>
                     <div class="article-container flex flex-wrap gap-4">
                         <article class="flex items-center gap-3 w-full">
@@ -238,8 +261,6 @@
                         </article>
                     </div>
                 </div>
-
-
             </div>
 
             <div class="flex justify-center mt-10">
@@ -257,23 +278,23 @@
         <h2 class="text-3xl md:text-4xl font-bold text-center mt-2">Projects</h2>
 
         <div class="flex flex-wrap justify-center gap-8 mt-10">
-
             <!-- Project Card -->
             <div
                 class="bg-white border rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-transform w-[350px]">
                 <div class="w-full aspect-[16/9] overflow-hidden">
                     <img src="./assets/chatapp.png" alt="Chat Application"
-                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div class="p-6 flex flex-col items-center text-center">
                     <h3 class="text-xl font-semibold mb-3">Chat Application</h3>
                     <p class="text-gray-600 text-sm mb-4 c">
-                        A real-time chat application with authentication, private/group chats, media uploads, and a
-                        responsive UI.
-                        Built with modern web technologies for speed, security, and scalability.
+                        A real-time chat application with authentication, private/group
+                        chats, media uploads, and a responsive UI. Built with modern web
+                        technologies for speed, security, and scalability.
                     </p>
                     <p class="text-xs text-gray-500 mb-4">
-                        Tech: React, Tailwind CSS, Node.js, Express.js, MongoDB, Socket.io, JWT, Cloudinary
+                        Tech: React, Tailwind CSS, Node.js, Express.js, MongoDB,
+                        Socket.io, JWT, Cloudinary
                     </p>
                     <div class="flex gap-4">
                         <a href="https://github.com/aadityaexe/ChatApp"
@@ -290,17 +311,18 @@
                 class="bg-white border rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-transform w-[350px]">
                 <div class="w-full aspect-[16/9] overflow-hidden">
                     <img src="./assets/StitchMeUp.png" alt="StitchMeUp Application"
-                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div class="p-6 flex flex-col items-center text-center">
                     <h3 class="text-xl font-semibold mb-3">StitchMeUp</h3>
                     <p class="text-gray-600 text-sm mb-4 c">
-                        A collaborative platform for fashion enthusiasts to connect, share ideas, and showcase
-                        handcrafted designs.
-                        Includes a secure admin panel, authentication, media uploads, and smooth notifications.
+                        A collaborative platform for fashion enthusiasts to connect, share
+                        ideas, and showcase handcrafted designs. Includes a secure admin
+                        panel, authentication, media uploads, and smooth notifications.
                     </p>
                     <p class="text-xs text-gray-500 mb-4">
-                        Tech: React, Tailwind CSS, Node.js, Express.js, MongoDB, JWT, Bcrypt, Cloudinary, React Toastify
+                        Tech: React, Tailwind CSS, Node.js, Express.js, MongoDB, JWT,
+                        Bcrypt, Cloudinary, React Toastify
                     </p>
                     <div class="flex gap-4">
                         <a href="https://github.com/aadityaexe/StitchMeUp"
@@ -317,24 +339,22 @@
                 class="bg-white border rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-transform w-[350px]">
                 <div class="w-full aspect-[16/9] overflow-hidden">
                     <img src="./assets/MiniRelationalDatabase.png" alt="Mini Relational Database"
-                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div class="p-6 flex flex-col items-center text-center">
                     <h3 class="text-xl font-semibold mb-3">Mini Relational Database</h3>
                     <p class="text-gray-600 text-sm mb-4 c">
-                        A lightweight relational database system built from scratch in C++ using STL.
-                        Supports basic CRUD operations, relational integrity, and efficient data handling.
+                        A lightweight relational database system built from scratch in C++
+                        using STL. Supports basic CRUD operations, relational integrity,
+                        and efficient data handling.
                     </p>
-                    <p class="text-xs text-gray-500 mb-4">
-                        Tech: C++, STL
-                    </p>
+                    <p class="text-xs text-gray-500 mb-4">Tech: C++, STL</p>
                     <div class="flex gap-4">
                         <a href="https://github.com/aadityaexe/Mini-Relational-Database"
                             class="px-5 py-2 text-sm rounded-full border hover:bg-gray-800 hover:text-white transition c">GitHub</a>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!-- View All Projects Button -->
@@ -345,39 +365,147 @@
             </a>
         </div>
     </section>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="pt-[6vh] px-[10rem] max-[1600px]:px-[6rem] max-[1200px]:px-[5%]">
+        <p class="section__text__p1 text-gray-600 font-semibold text-center">
+            My Professional Journey
+        </p>
+        <h2 class="title text-4xl md:text-5xl font-bold text-center mt-3">
+            Experience
+        </h2>
 
+        <div class="mt-12 flex justify-center">
+            <div class="bg-white border rounded-2xl shadow-sm p-10 max-w-[1000px] w-full"
+                style="border-color: var(--accent-border)">
+                <!-- Title -->
+                <h3 class="text-2xl font-semibold text-gray-800">
+                    Freelance Frontend Developer
+                </h3>
+                <p class="text-gray-500 mt-1">
+                    Self-employed (Freelance) · Nov 2024 – Dec 2024 · 2 months
+                    <br />
+                    Muzaffarpur, Bihar, India · Remote
+                </p>
 
+                <!-- Summary -->
+                <p class="text-gray-700 mt-5 leading-relaxed">
+                    As a freelance frontend developer, I specialize in building visually
+                    striking, animated, and fully responsive websites that deliver
+                    seamless performance across all devices. With a portfolio of
+                    <span class="font-semibold">10+ successfully delivered web projects</span>
+                    sourced via social media, I merge modern UI/UX design principles
+                    with interactive animations and intuitive navigation to create
+                    engaging digital experiences.
+                </p>
+                <p class="text-gray-700 mt-4 leading-relaxed">
+                    I combine creativity with performance, leveraging the latest
+                    frontend technologies to craft websites that are both technically
+                    robust and aesthetically compelling.
+                </p>
 
+                <!-- Highlights -->
+                <div class="mt-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">
+                        Key Highlights:
+                    </h4>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>
+                            🚀 Delivered 10+ custom-built websites, optimized for mobile and
+                            desktop with unique visual themes
+                        </li>
+                        <li>
+                            ⚛️ Developed dynamic Single Page Applications (SPAs) using
+                            React.js
+                        </li>
+                        <li>
+                            🔁 Implemented smooth routing and navigation with React Router
+                            DOM
+                        </li>
+                        <li>
+                            💻 Created performant static sites with HTML, CSS, and
+                            JavaScript
+                        </li>
+                        <li>
+                            🎨 Styled responsive layouts using Tailwind CSS for rapid UI
+                            development
+                        </li>
+                        <li>
+                            🌀 Integrated GSAP animations for smooth scroll effects, motion
+                            graphics, and micro-interactions
+                        </li>
+                        <li>
+                            📊 Embedded Canva-generated Pie Charts for visualizing dashboard
+                            data
+                        </li>
+                        <li>
+                            ✨ Focused on creative transitions, interactive storytelling,
+                            and animated UI elements
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skills -->
+                <div class="mt-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Skills:</h4>
+                    <p class="text-gray-700">
+                        React.js · React Router DOM · Tailwind CSS · HTML5 · JavaScript ·
+                        GreenSock Animation Platform (GSAP) · Responsive Web Design ·
+                        Animation
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Professional Button -->
+        <div class="flex justify-center mt-10">
+            <a href="experience.html"
+                class="px-6 py-3 text-lg font-semibold rounded-full border hover:bg-gray-900 hover:text-white transition">
+                View Full Experience
+            </a>
+        </div>
+    </section>
 
     <!-- CONTACT -->
     <section id="contact" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] mt-12">
-        <p class="section__text__p1 text-gray-600 font-semibold text-center">Get in Touch</p>
-        <h2 class="title text-3xl md:text-4xl font-bold text-center mt-2">Contact Me</h2>
+        <p class="section__text__p1 text-gray-600 font-semibold text-center">
+            Get in Touch
+        </p>
+        <h2 class="title text-3xl md:text-4xl font-bold text-center mt-2">
+            Contact Me
+        </h2>
 
-        <div class="contact-info-upper-container flex flex-wrap justify-center gap-4 border rounded-2xl p-4 mt-8"
-            style="border-color: var(--accent-border); background: rgba(250,250,250,1);">
+        <div class="contact-info-upper-container flex flex-wrap justify-center gap-4 border rounded-2xl p-4 mt-8" style="
+          border-color: var(--accent-border);
+          background: rgba(250, 250, 250, 1);
+        ">
             <div class="contact-info-container flex items-center gap-3">
                 <img src="./assets/email.png" alt="email" class="w-10 h-10" />
-                <p class="text-lg"><a href="mailto:kmradi2002@gmail.com"
-                        class="hover:underline">kmradi2002@gmail.com</a></p>
+                <p class="text-lg">
+                    <a href="mailto:kmradi2002@gmail.com" class="hover:underline">kmradi2002@gmail.com</a>
+                </p>
             </div>
 
             <div class="contact-info-container flex items-center gap-3">
                 <img src="./assets/linkedin.png" alt="linkedin" class="w-10 h-10" />
-                <p class="text-lg"><a href="https://linkedin.com/in/aditya-kumar-1187a0265"
-                        class="hover:underline">LinkedIn</a></p>
+                <p class="text-lg">
+                    <a href="https://linkedin.com/in/aditya-kumar-1187a0265" class="hover:underline">LinkedIn</a>
+                </p>
             </div>
             <div class="contact-info-container flex items-center gap-3">
                 <img src="./assets/github.png" alt="github" class="w-10 h-10" />
-                <p class="text-lg"><a href="https://github.com/aadityaexe" class="hover:underline">GitHub</a></p>
+                <p class="text-lg">
+                    <a href="https://github.com/aadityaexe" class="hover:underline">GitHub</a>
+                </p>
             </div>
             <div class="contact-info-container flex items-center gap-3">
                 <img src="./assets/x.png" alt="x" class="w-10 h-10" />
-                <p class="text-lg"><a href="https://x.com/Aadityakumar_01" class="hover:underline">X</a></p>
+                <p class="text-lg">
+                    <a href="https://x.com/Aadityakumar_01" class="hover:underline">X</a>
+                </p>
             </div>
             <div class="contact-info-container flex items-center gap-3">
                 <img src="./assets/leetcode.png" alt="leetcode" class="w-10 h-10" />
-                <p class="text-lg"><a href="https://leetcode.com/u/aadityakumar_01" class="hover:underline">LeetCode</a>
+                <p class="text-lg">
+                    <a href="https://leetcode.com/u/aadityakumar_01" class="hover:underline">LeetCode</a>
                 </p>
             </div>
         </div>
@@ -393,10 +521,11 @@
                 <li><a href="#contact" class="hover:underline">Contact</a></li>
             </ul>
         </nav>
-        <p class="text-center mt-6">&copy; 2024 Aditya Kumar. All Rights Reserved.</p>
+        <p class="text-center mt-6">
+            &copy; 2024 Aditya Kumar. All Rights Reserved.
+        </p>
     </footer>
     <script src="./script.js"></script>
-
 </body>
 
 </html>
