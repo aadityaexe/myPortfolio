@@ -1,262 +1,388 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aditya Kumar — Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
 </head>
 
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Aditya Kumar</div>
+<body class="bg-white text-gray-900">
+    <!-- DESKTOP NAV: visible when > 1200px -->
+    <nav id="desktop-nav"
+        class="sticky top-0 z-50 bg-white flex justify-between items-center h-[10vh] px-[10rem] max-[1200px]:hidden shadow-md">
+        <div class="logo text-2xl font-semibold select-none">Aditya Kumar</div>
+        <ul class="nav-links flex gap-8 list-none text-[1.5rem]">
+            <li><a href="#about"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">About</a></li>
+            <li><a href="#skills"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Skills</a></li>
+            <li><a href="#projects"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Projects</a></li>
+            <li><a href="#contact"
+                    class="hover:text-gray-500 hover:underline hover:underline-offset-8 transition">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="prop">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- HAMBURGER NAV: visible when <= 1200px -->
+    <nav id="hamburger-nav"
+        class="sticky top-0 z-50 bg-white hidden max-[1200px]:flex justify-between items-center px-6 py-4 shadow-md">
+        <div class="logo text-xl font-semibold select-none">Aditya Kumar</div>
+
+        <div class="hamburger-menu relative">
+            <button id="hambtn" aria-expanded="false" class="hamburger-icon w-8" type="button" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="mobileMenu"
+                class="menu-links absolute right-0 top-full bg-white border border-gray-200 rounded-md overflow-hidden w-[220px] max-h-0 transition-all duration-300">
+                <li><a href="#about" class="block px-4 py-3 text-[1.1rem]" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" class="block px-4 py-3 text-[1.1rem]" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" class="block px-4 py-3 text-[1.1rem]" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" class="block px-4 py-3 text-[1.1rem]" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
     </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Aditya Kumar</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+
+
+    <!-- PROFILE SECTION -->
+    <section id="profile" class="pt-[4vh] section px-[10rem] max-[1200px]:px-[5%] flex justify-center items-center gap-20
+                  h-[96vh] max-[1400px]:h-[83vh] max-[1400px]:mb-24 max-[1200px]:flex-col max-[600px]:h-[83vh]">
+        <!-- picture -->
+        <div
+            class="section__pic-container w-[400px] h-[400px] max-[1200px]:w-[275px] max-[1200px]:h-[275px] max-[600px]:h-[78vw]">
+            <img src="./assets/firstPHOTO.jpg" alt="Aditya Kumar" class="w-full h-full object-cover rounded-lg" />
         </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/firstPHOTO.jpg" alt="Aditya Kumar profile picture" />
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Aditya Kumar</h1>
-            <p class="section__text__p2">Frontend Developer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
+
+        <!-- text -->
+        <div class="section__text text-center max-[1200px]:w-full">
+            <p class="section__text__p1 text-gray-600 font-semibold">Hello, I'm</p>
+            <h1 class="title text-[3rem] max-[600px]:text-2xl font-bold">Aditya Kumar</h1>
+            <p class="section__text__p2 text-[1.75rem] max-[600px]:text-[1.25rem] font-semibold mb-6">Web Developer
+            </p>
+
+            <div class="btn-container flex justify-center max-[1200px]:justify-center gap-4 flex-wrap">
+                <button
+                    class="btn btn-color-2 px-6 py-3 rounded-full border border-[rgba(53,53,53,0.1)] font-semibold hover:bg-gray-800 hover:text-white transition"
+                    onclick="window.open('./assets/AdityaResume.pdf')">Download CV</button>
+
+                <button
+                    class="btn btn-color-1 px-6 py-3 rounded-full border border-[rgba(53,53,53,0.1)] font-semibold hover:bg-black hover:text-white transition"
+                    onclick="location.href='#contact'">Contact Info</button>
             </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+
+            <div id="socials-container" class="flex justify-center gap-4 mt-4">
+                <img src="./assets/linkedin.png" alt="LinkedIn" class="icon w-8 h-8 cursor-pointer"
                     onclick="location.href='https://linkedin.com/in/aditya-kumar-1187a0265'" />
-                <img src="./assets/github.png" alt="My Github profile" class="icon"
+                <img src="./assets/github.png" alt="GitHub" class="icon w-8 h-8 cursor-pointer"
                     onclick="location.href='https://github.com/aadityaexe'" />
+                <img src="./assets/x.png" alt="x" class="icon w-8 h-8 cursor-pointer"
+                    onclick="location.href='https://x.com/Aadityakumar_01'" />
+                <img src="./assets/leetcode.png" alt="Leetcode" class="icon w-8 h-8 cursor-pointer"
+                    onclick="location.href='https://leetcode.com/u/aadityakumar_01'" />
             </div>
         </div>
     </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/secPHOTO.jpg" alt="Profile picture" class="about-pic" />
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%]">
+        <p class="section__text__p1 text-gray-600 font-semibold text-center">Get To Know More</p>
+        <h2 class="title text-3xl md:text-4xl font-bold text-center mt-2">About Me</h2>
+
+        <div class="section-container flex gap-16 mt-8 max-[1200px]:flex-col">
+            <div
+                class="section__pic-container w-[400px] h-[400px] max-[1200px]:w-[275px] max-[1200px]:h-[275px] mx-auto">
+                <img src="./assets/secPHOTO.jpg" alt="Profile"
+                    class="about-pic rounded-2xl w-full h-full object-cover" />
             </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-                        <h3>Experience</h3>
-                        <p>0 years <br />Frontend Development</p>
+
+            <div class="about-details-container flex flex-col justify-center gap-6">
+                <div class="about-containers flex gap-6 flex-wrap">
+                    <div class="details-container p-6 bg-white rounded-2xl border"
+                        style="border-color: var(--accent-border);">
+                        <img src="./assets/experience.png" alt="" class="icon mx-auto w-10 h-10" />
+                        <h3 class="text-lg font-semibold text-center mt-3">Experience</h3>
+                        <p class="text-center">0 years <br /> Frontend Development</p>
                     </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon" class="icon" />
-                        <h3>Education</h3>
-                        <p> Bachelor in Camputer Application</p>
+
+                    <div class="details-container p-6 bg-white rounded-2xl border"
+                        style="border-color: var(--accent-border);">
+                        <img src="./assets/education.png" alt="" class="icon mx-auto w-10 h-10" />
+                        <h3 class="text-lg font-semibold text-center mt-3">Education</h3>
+                        <p class="text-center">Bachelor in Computer Application</p>
                     </div>
                 </div>
-                <div class="text-container">
-                    <p>
-                        Detail-oriented and creative Front-End Developer with a strong foundation in HTML, CSS, and
-                        JavaScript. Experienced in building responsive, user-friendly web applications using React.js
-                        and Tailwind CSS. Proven ability to integrate APIs, optimize performance, and enhance user
-                        experiences through dynamic animations and modern design principles. Skilled in leveraging
-                        front-end technologies to develop scalable and maintainable solutions. Committed to continuous
-                        learning and staying up-to-date with industry trends to contribute effectively to innovative
-                        projects and collaborate with cross-functional teams.
 
+                <div class="text-container text-justify max-w-[780px]">
+                    <p class="text-gray-700 leading-relaxed">
+                        Detail-oriented and creative Front-End Developer with a strong foundation in HTML, CSS, and
+                        JavaScript.
+                        Experienced in building responsive, user-friendly web applications using React.js and Tailwind
+                        CSS.
+                        Proven ability to integrate APIs, optimize performance, and enhance user experiences through
+                        dynamic
+                        animations and modern design principles. Skilled in leveraging front-end technologies to develop
+                        scalable
+                        and maintainable solutions. Committed to continuous learning and staying up-to-date with
+                        industry trends.
                     </p>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
     </section>
-    <section id="skills">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Skills</h1>
-        <div class="skills">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="skills-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
 
-                        <article>
-                            <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>Basic</p>
-                            </div>
+    <!-- SKILLS -->
+    <section id="skills" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] mt-12">
+        <p class="section__text__p1 text-gray-600 font-semibold text-center">Explore My</p>
+        <h2 class="title text-3xl md:text-4xl font-bold text-center mt-2">Skills</h2>
+
+        <div class="skills mt-8">
+            <div class="about-containers flex gap-6 flex-wrap justify-center">
+
+                <!-- FRONTEND -->
+                <div class="details-container p-6 rounded-2xl border max-w-[420px]"
+                    style="border-color: var(--accent-border);">
+                    <h3 class="skills-sub-title text-xl font-semibold mb-4">Frontend Development</h3>
+                    <div class="article-container flex flex-wrap gap-4">
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">HTML</h4>
                         </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
-                            <div>
-                                <h3>React</h3>
-                                <p>Basic</p>
-                            </div>
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">CSS</h4>
+                        </article>
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">Tailwind CSS</h4>
+                        </article>
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">JavaScript</h4>
+                        </article>
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">GSAP</h4>
                         </article>
                     </div>
                 </div>
-                <div class="details-container">
-                    <h2 class="skills-sub-title">Programing</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
-                            <div>
-                                <h3>C++</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
-                            <div>
-                                <h3>Java</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
-                            <div>
-                                <h3>Data Structures and Algorithms</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
 
+                <!-- BACKEND -->
+                <div class="details-container p-6 rounded-2xl border max-w-[420px]"
+                    style="border-color: var(--accent-border);">
+                    <h3 class="skills-sub-title text-xl font-semibold mb-4">Backend</h3>
+                    <div class="article-container flex flex-wrap gap-4">
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">Node.js</h4>
+                        </article>
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">Express.js</h4>
+                        </article>
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">MongoDB</h4>
+                        </article>
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">Mongoose</h4>
+                        </article>
+                        <article class="flex items-center gap-3 w-full">
+                            <h4 class="font-medium">JWT</h4>
+                        </article>
                     </div>
+                </div>
+
+                <!-- HIDDEN SECTIONS -->
+                <div id="extra-skills" class="hidden flex gap-6 flex-wrap justify-center w-full">
+                    <!-- Framework -->
+                    <div class="details-container p-6 rounded-2xl border max-w-[420px]"
+                        style="border-color: var(--accent-border);">
+                        <h3 class="skills-sub-title text-xl font-semibold mb-4">Framework</h3>
+                        <div class="article-container flex flex-wrap gap-4">
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Next.js</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Bootstrap</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Tailwind CSS</h4>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Library -->
+                    <div class="details-container p-6 rounded-2xl border max-w-[420px]"
+                        style="border-color: var(--accent-border);">
+                        <h3 class="skills-sub-title text-xl font-semibold mb-4">Library</h3>
+                        <div class="article-container flex flex-wrap gap-4">
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">React</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Redux</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Axios</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">GSAP</h4>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Programming -->
+                    <div class="details-container p-6 rounded-2xl border max-w-[420px]"
+                        style="border-color: var(--accent-border);">
+                        <h3 class="skills-sub-title text-xl font-semibold mb-4">Programming</h3>
+                        <div class="article-container flex flex-wrap gap-4">
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">C++</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Java</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">TypeScript</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Python</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">JavaScript</h4>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="details-container p-6 rounded-2xl border max-w-[420px]"
+                        style="border-color: var(--accent-border);">
+                        <h3 class="skills-sub-title text-xl font-semibold mb-4">Tools & Platforms</h3>
+                        <div class="article-container flex flex-wrap gap-4">
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Git</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">GitHub</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Postman</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Vercel</h4>
+                            </article>
+                            <article class="flex items-center gap-3 w-full">
+                                <h4 class="font-medium">Netlify</h4>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show All Button -->
+            <div class="text-center mt-6">
+
+                <button id="toggle-skills"
+                    class="btn btn-color-1 px-6 py-3 rounded-full border border-[rgba(53,53,53,0.1)] font-semibold hover:bg-black hover:text-white transition"
+                    onclick="location.href='#contact'">Show All Skills</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] mt-12">
+        <p class="section__text__p1 text-gray-600 font-semibold text-center">Browse My Recent</p>
+        <h2 class="title text-3xl md:text-4xl font-bold text-center mt-2">Projects</h2>
+
+        <div class="about-containers flex gap-6 flex-wrap justify-center mt-8">
+            <!-- project card -->
+            <div class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px]">
+                <img src="./assets/GEMINI.png" alt="Gemini" class="project-img w-full rounded-2xl mb-4 object-cover" />
+                <h3 class="text-xl font-semibold text-center">Gemini Clone</h3>
+                <div class="btn-container flex gap-4 justify-center mt-4">
+                    <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
+                        onclick="location.href='https://github.com/aadityaexe/Google-Gemini-Clone'">Github</button>
+                    <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
+                        onclick="location.href='https://aditya-exe-gemini-clone.netlify.app/'">Live Demo</button>
+                </div>
+            </div>
+
+            <div class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px]">
+                <img src="./assets/crypto.png" alt="Crypto" class="project-img w-full rounded-2xl mb-4 object-cover" />
+                <h3 class="text-xl font-semibold text-center">Cryptocurrency Platform (Fake Coin)</h3>
+                <div class="btn-container flex gap-4 justify-center mt-4">
+                    <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
+                        onclick="location.href='https://github.com/aadityaexe/FackCoin'">Github</button>
+                    <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
+                        onclick="location.href='https://fake-coine.netlify.app'">Live Demo</button>
+                </div>
+            </div>
+
+            <div class="details-container bg-gray-50 border rounded-2xl p-6 max-w-[350px]">
+                <img src="./assets/youtube-clone.png" alt="Youtube Clone"
+                    class="project-img w-full rounded-2xl mb-4 object-cover" />
+                <h3 class="text-xl font-semibold text-center">Youtube Clone UiUx</h3>
+                <div class="btn-container flex gap-4 justify-center mt-4">
+                    <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
+                        onclick="location.href='https://github.com/aadityaexe/Youtube-Clone'">Github</button>
+                    <button class="px-4 py-2 rounded-full border hover:bg-gray-800 hover:text-white transition"
+                        onclick="location.href='https://aditya-exe-youtybe-clone.netlify.app/'">Live Demo</button>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="skills-details-container">
-            <div class="about-containers">
 
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/GEMINI.png" alt="Project 2" class="project-img" />
-                    </div>
-                    <h2 class="skills-sub-title project-title">Gemini Clone</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/aadityaexe/Google-Gemini-Clone'">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://aditya-exe-gemini-clone.netlify.app/'">
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
+    <!-- CONTACT -->
+    <section id="contact" class="pt-[4vh] px-[10rem] max-[1200px]:px-[5%] mt-12">
+        <p class="section__text__p1 text-gray-600 font-semibold text-center">Get in Touch</p>
+        <h2 class="title text-3xl md:text-4xl font-bold text-center mt-2">Contact Me</h2>
 
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/crypto.png" alt="Project 1" class="project-img" />
-                    </div>
-                    <h2 class="skills-sub-title project-title">Cryptocurrency Platform (Fake Coin)</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/aadityaexe/FackCoin'">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://fake-coine.netlify.app'">
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/youtube-clone.png" alt="Project 1" class="project-img" />
-                    </div>
-                    <h2 class="skills-sub-title project-title">Youtube Clone UiUx</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/aadityaexe/Youtube-Clone'">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://aditya-exe-youtybe-clone.netlify.app/'">
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-
+        <div class="contact-info-upper-container flex flex-wrap justify-center gap-4 border rounded-2xl p-4 mt-8"
+            style="border-color: var(--accent-border); background: rgba(250,250,250,1);">
+            <div class="contact-info-container flex items-center gap-3">
+                <img src="./assets/email.png" alt="email" class="w-10 h-10" />
+                <p class="text-lg"><a href="mailto:kmradi2002@gmail.com"
+                        class="hover:underline">kmradi2002@gmail.com</a></p>
             </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-    </section>
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-                <p><a href="mailto:kmradi2002@gmail.com">kmradi2002@gmail.com</a></p>
+
+            <div class="contact-info-container flex items-center gap-3">
+                <img src="./assets/linkedin.png" alt="linkedin" class="w-10 h-10" />
+                <p class="text-lg"><a href="https://linkedin.com/in/aditya-kumar-1187a0265"
+                        class="hover:underline">LinkedIn</a></p>
             </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="https://linkedin.com/in/aditya-kumar-1187a0265">LinkedIn</a></p>
+            <div class="contact-info-container flex items-center gap-3">
+                <img src="./assets/github.png" alt="github" class="w-10 h-10" />
+                <p class="text-lg"><a href="https://github.com/aadityaexe" class="hover:underline">GitHub</a></p>
+            </div>
+            <div class="contact-info-container flex items-center gap-3">
+                <img src="./assets/x.png" alt="x" class="w-10 h-10" />
+                <p class="text-lg"><a href="https://x.com/Aadityakumar_01" class="hover:underline">X</a></p>
+            </div>
+            <div class="contact-info-container flex items-center gap-3">
+                <img src="./assets/leetcode.png" alt="Leetcode" class="w-10 h-10" />
+                <p class="text-lg"><a href="https://leetcode.com/u/aadityakumar_01" class="hover:underline">Leetcode</a>
+                </p>
             </div>
         </div>
     </section>
-    <footer>
+
+    <!-- FOOTER -->
+    <footer class="px-[10rem] max-[1200px]:px-[5%] mt-12 pb-8">
         <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <ul class="nav-links flex justify-center gap-8 flex-wrap text-lg">
+                <li><a href="#about" class="hover:underline">About</a></li>
+                <li><a href="#skills" class="hover:underline">Skills</a></li>
+                <li><a href="#projects" class="hover:underline">Projects</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
         </nav>
-        <p>&#169; Copyright 2024 Aditya Kumar. All Rights Reserved. </p>
+        <p class="text-center mt-6">&copy; 2024 Aditya Kumar. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
