@@ -16,9 +16,9 @@
 </head>
 
 <body class="bg-white text-gray-900">
-    <!-- DESKTOP NAV: visible when > 1200px -->
+    <!-- DESKTOP NAV: visible when > 768px -->
     <nav id="desktop-nav"
-        class="sticky top-0 z-50 bg-white flex justify-between items-center h-[10vh] px-[10rem] max-[1200px]:hidden shadow-md">
+        class="sticky top-0 z-50 bg-white flex justify-between items-center h-[10vh] px-[10rem] max-[768px]:hidden shadow-md">
         <a href="#profile">
             <div class="logo text-2xl font-semibold select-none">Aditya Kumar</div>
         </a>
@@ -34,13 +34,13 @@
         </ul>
     </nav>
 
-    <!-- HAMBURGER NAV: visible when <= 1200px -->
+    <!-- HAMBURGER NAV: visible when <= 768px -->
     <nav id="hamburger-nav"
-        class="sticky top-0 z-50 bg-white hidden max-[1200px]:flex justify-between items-center px-6 py-4 shadow-md">
+        class="sticky top-0 z-50 bg-white hidden max-[768px]:flex justify-between items-center px-6 py-4 shadow-md">
         <div class="logo text-xl font-semibold select-none">Aditya Kumar</div>
 
         <div class="hamburger-menu relative">
-            <button id="hambtn" aria-expanded="false" class="hamburger-icon w-8" type="button" onclick="toggleMenu()">
+            <button id="hambtn" aria-expanded="false" class="hamburger-icon w-8" type="button">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -48,13 +48,14 @@
 
             <ul id="mobileMenu"
                 class="menu-links absolute right-0 top-full bg-white border border-gray-200 rounded-md overflow-hidden w-[220px] max-h-0 transition-all duration-300">
-                <li><a href="#about" class="block px-4 py-3 text-[1.1rem]" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skills" class="block px-4 py-3 text-[1.1rem]" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#projects" class="block px-4 py-3 text-[1.1rem]" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" class="block px-4 py-3 text-[1.1rem]" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#about" class="block px-4 py-3 text-[1.1rem]">About</a></li>
+                <li><a href="#skills" class="block px-4 py-3 text-[1.1rem]">Skills</a></li>
+                <li><a href="#projects" class="block px-4 py-3 text-[1.1rem]">Projects</a></li>
+                <li><a href="#contact" class="block px-4 py-3 text-[1.1rem]">Contact</a></li>
             </ul>
         </div>
     </nav>
+
 
 
     <!-- PROFILE SECTION -->
@@ -299,12 +300,11 @@
                 </div>
             </div>
 
-            <!-- Show All Button -->
-            <div class="text-center mt-6">
-
-                <button id="toggle-skills"
-                    class="btn btn-color-1 px-6 py-3 rounded-full border border-[rgba(53,53,53,0.1)] font-semibold hover:bg-black hover:text-white transition"
-                    onclick="location.href='#contact'">Show All Skills</button>
+            <div class="flex justify-center mt-10">
+                <a href="skills.html"
+                    class="px-6 py-3 text-lg font-semibold rounded-full border hover:bg-gray-900 hover:text-white transition">
+                    View All Skills
+                </a>
             </div>
         </div>
     </section>
