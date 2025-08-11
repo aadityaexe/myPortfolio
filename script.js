@@ -30,3 +30,5 @@ mobileMenu.querySelectorAll("a").forEach((link) => {
     hambtn.setAttribute("aria-expanded", "false");
   });
 });
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
