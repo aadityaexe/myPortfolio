@@ -3,8 +3,6 @@
 Welcome to my Portfolio repository! This project showcases my skills, projects, and experience as a web developer. It is designed to provide a professional overview of my work while highlighting my creativity and technical expertise.
 
 
-
-
 ## Table of Contents
 
 - [Introduction](#introduction)
